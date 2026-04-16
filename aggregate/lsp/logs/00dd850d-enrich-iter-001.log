@@ -1,0 +1,22 @@
+[2026-04-16T04:08:18Z] === ENRICH ITERATION 1 START | repo=anthropics/life-sciences sha=00dd850d ===
+[2026-04-16T04:08:18Z] [iter=1] PHASE START: enrich repo=anthropics/life-sciences sha=00dd850d runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/00dd850d-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/00dd850d85e573f30809d4aae6c930fc03bdf079.nq.gz
+[2026-04-16T04:08:18Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=76 MB
+[2026-04-16T04:08:21Z] [iter=1] AST store loaded triples=394202 load_secs=3 mem_mb=664 MB
+[2026-04-16T04:08:21Z] [iter=1] Step 2: Finding LSP targets mem_mb=664 MB
+[2026-04-16T04:08:21Z] [iter=1] LSP targets found call_sites=2746 imports=159 extends=0 implements=0 secs=0
+[2026-04-16T04:08:21Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=664 MB
+[2026-04-16T04:08:24Z] [iter=1] Position index built positions=27493 nodes_with_types=36192 secs=2 mem_mb=664 MB
+[2026-04-16T04:08:24Z] [iter=1] Step 3: Starting LSP resolution mem_mb=664 MB already_completed_types=[] already_completed_files=0
+[2026-04-16T04:08:24Z] [iter=1] Resolving target type target_type=call_site count=2746
+[2026-04-16T04:08:52Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=2 resolved=99 errors=170 current=single-cell-rna-qc/scripts/qc_analysis.py
+[2026-04-16T04:09:43Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.4 files_done=6 resolved=342 errors=484 current=instrument-data-to-allotrope/scripts/convert_to_asm.py
+[2026-04-16T04:10:30Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.2 files_done=9 resolved=632 errors=773 current=scvi-tools/scripts/model_utils.py
+[2026-04-16T04:11:10Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.9 files_done=15 resolved=791 errors=1016 current=nextflow-development/scripts/generate_samplesheet.py
+[2026-04-16T04:11:41Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.4 files_done=19 resolved=1002 errors=1217 current=scvi-tools/scripts/transfer_labels.py
+[2026-04-16T04:12:10Z] [iter=1] Target type resolved target_type=call_site resolved=1177 errors=1397 secs=226 mem_mb=664 MB
+[2026-04-16T04:12:10Z] [iter=1] Resolving target type target_type=import_statement count=159
+[2026-04-16T04:12:11Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=3.9 files_done=14 resolved=92 errors=0 current=instrument-data-to-allotrope/scripts/flatten_asm.py
+[2026-04-16T04:12:12Z] [iter=1] Target type resolved target_type=import_statement resolved=141 errors=0 secs=2 mem_mb=664 MB
+[2026-04-16T04:12:15Z] [iter=1] Step 5: Writing final enrichment file triples=21825
+[2026-04-16T04:12:16Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/00dd850d85e573f30809d4aae6c930fc03bdf079.nq.gz size_kb=400
+[2026-04-16T04:12:16Z] [iter=1] PHASE END: enrich elapsed_s=238 elapsed_min=4.0 total_triples=21825
